@@ -7,7 +7,7 @@ const batchSize = 50;
 
 const logToFile = async (partyName, status) => {
   const logLine = `${new Date().toISOString()} - ${partyName}: ${status}\n`;
-  await fs.appendFile("tempData/partyName.txt", logLine, "utf8");
+  await fs.appendFile("partyName.txt", logLine, "utf8");
 };
 
 export const tempPartyNameDetails = async (req, res) => {
